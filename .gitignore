@@ -42,7 +42,6 @@ web/src/main/webapp/vendor_modules/
 web/src/main/webapp/components_vendor/
 *.tar.gz
 node_modules/
-application.yml
 generatorConfig.properties
 generatorConfig.xml
 logback-spring.xml
