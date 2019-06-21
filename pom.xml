@@ -21,6 +21,7 @@
 
 	<modules>
 		<module>websocket</module>
+		<module>flink</module>
 	</modules>
 
 
