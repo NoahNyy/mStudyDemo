@@ -1,0 +1,6 @@
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans,conditions,env,health,info
