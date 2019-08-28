@@ -16,5 +16,6 @@
         <module>demo-websocket</module>
         <module>demo-spring</module>
         <module>demo-flink</module>
+        <module>demo-mybatisplus</module>
     </modules>
 </project>
