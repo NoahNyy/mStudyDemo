@@ -10,6 +10,6 @@
     <description>Spring 大家族学习</description>
 
     <modules>
-        <module>spring-boot</module>
+        <module>demo-spring-boot</module>
     </modules>
 </project>
