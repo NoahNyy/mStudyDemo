@@ -1,0 +1,11 @@
+# Datasource
+spring:
+  application:
+    name: demo-spring-es
+  main:
+    allow-bean-definition-overriding: true
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: localhost:9300
+

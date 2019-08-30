@@ -5,11 +5,13 @@
 
     <groupId>org.noahnyy</groupId>
     <artifactId>demo-spring</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
 
     <description>Spring 大家族学习</description>
 
     <modules>
         <module>demo-spring-boot</module>
+        <module>demo-spring-es</module>
     </modules>
 </project>
