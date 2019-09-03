@@ -5,7 +5,9 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
@@ -37,6 +39,8 @@ import lombok.experimental.Accessors;
  * @since 2019-08-29
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Accessors(chain = true)
 @Document(indexName = "item", type = "docs", shards = 1, replicas = 0)
 public class ItemEntity {
