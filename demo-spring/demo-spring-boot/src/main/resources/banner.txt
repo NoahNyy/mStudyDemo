@@ -1,0 +1,9 @@
+curl "https://devops.datenkollektiv.de/renderBannerTxt?text=spring-es&font=soft"
+
+${Ansi.BRIGHT_CYAN}                         ,--.                          ,--.                      ,--.
+${Ansi.BRIGHT_CYAN}  ,---.   ,---.  ,--.--. `--' ,--,--,   ,---.  ,-----. |  |-.   ,---.   ,---.  ,-'  '-.
+${Ansi.BRIGHT_CYAN} (  .-'  | .-. | |  .--' ,--. |      \ | .-. | '-----' | .-. ' | .-. | | .-. | '-.  .-'
+${Ansi.BRIGHT_CYAN} .-'  `) | '-' ' |  |    |  | |  ||  | ' '-' '         | `-' | ' '-' ' ' '-' '   |  |
+${Ansi.BRIGHT_CYAN} `----'  |  |-'  `--'    `--' `--''--' .`-  /           `---'   `---'   `---'    `--'
+${Ansi.BRIGHT_CYAN}         `--'                          `---'
+
