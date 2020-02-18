@@ -1,4 +1,4 @@
-package org.nyy.demo.mybatisplus.web.config;
+package org.nyy.demo.mybatisplus.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;

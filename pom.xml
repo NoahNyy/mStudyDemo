@@ -17,5 +17,6 @@
         <module>demo-spring</module>
         <module>demo-flink</module>
         <module>demo-mybatisplus</module>
+        <module>demo-mybatisplus-multidatasource</module>
     </modules>
 </project>

@@ -1,0 +1,8 @@
+dbone.url=jdbc:mysql://127.0.0.1:3306/dbone?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+dbone.username=admin
+dbone.password=admin
+
+dbtwo.url=jdbc:mysql://127.0.0.1:3306/dbtwo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+dbtwo.username=admin
+dbtwo.password=admin
+
