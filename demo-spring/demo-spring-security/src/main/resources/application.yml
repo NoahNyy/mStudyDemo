@@ -1,0 +1,18 @@
+# security
+#spring:
+#  security:
+#    user:
+#      name: user
+#      password: admin
+audience:
+  # 代表这个JWT的接收对象,存入audience
+  clientId: 098f6bcd4621d373cade4e832627b4f6
+  # JWT的签发主体，存入issuer
+  name: restapiuser
+  # token过期时间 30分钟
+  expiresSecond: 1800000
+  # 密钥, 经过Base64加密, 可自行替换
+  base64Secret: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=
+
+web:
+  excludePathPatterns: /login,/error
