@@ -14,5 +14,8 @@
     <module>demo-spring-boot</module>
     <module>demo-spring-es</module>
     <module>demo-spring-security</module>
+    <module>demo-spring-eureka</module>
+    <module>demo-spring-gateway</module>
+    <module>demo-spring-oauth2</module>
   </modules>
 </project>
