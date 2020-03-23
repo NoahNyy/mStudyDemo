@@ -13,13 +13,37 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class LambdaUtils {
 
+    /**
+     * 方法缓存
+     */
     private static Map<Class, SerializedLambda> CLASS_LAMBDA_CACHE = new ConcurrentHashMap<>();
+
+    /**
+     * 从lambda表达式获取SerializedLambda实例
+     *
+     * @param fn lambda表达式
+     * @return 获取SerializedLambda
+     */
+    public static SerializedLambda getSerializedLambda(Serializable fn) {
+        SerializedLambda lambda = CLASS_LAMBDA_CACHE.get(fn.getClass());
+        if (lambda == null) {
+            try {
+                Method method = fn.getClass().getDeclaredMethod("writeReplace");
+                method.setAccessible(Boolean.TRUE);
+                lambda = (SerializedLambda) method.invoke(fn);
+                CLASS_LAMBDA_CACHE.put(fn.getClass(), lambda);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return lambda;
+    }
 
     /***
      * 转换方法引用为属性名
      *
-     * @param fn
-     * @return
+     * @param fn 方法引用
+     * @return 属性名
      */
     public static <T, R> String convertToFieldName(SFunction<T, R> fn) {
         SerializedLambda lambda = getSerializedLambda(fn);
@@ -27,6 +51,12 @@ public class LambdaUtils {
         return methodToProperty(methodName);
     }
 
+    /**
+     * 方法名转换成属性名
+     *
+     * @param name 方法名
+     * @return 属性名
+     */
     public static String methodToProperty(String name) {
         if (name.startsWith("is")) {
             name = name.substring(2);
@@ -43,19 +73,9 @@ public class LambdaUtils {
         return name;
     }
 
-    public static SerializedLambda getSerializedLambda(Serializable fn) {
-        SerializedLambda lambda = CLASS_LAMBDA_CACHE.get(fn.getClass());
-        if (lambda == null) {
-            try {
-                Method method = fn.getClass().getDeclaredMethod("writeReplace");
-                method.setAccessible(Boolean.TRUE);
-                lambda = (SerializedLambda) method.invoke(fn);
-                CLASS_LAMBDA_CACHE.put(fn.getClass(), lambda);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        return lambda;
+    public static <T, R> String convertToFieldName(SBiConsumer<T, R> bc) {
+        SerializedLambda lambda = getSerializedLambda(bc);
+        String methodName = lambda.getImplMethodName();
+        return methodToProperty(methodName);
     }
-
 }
