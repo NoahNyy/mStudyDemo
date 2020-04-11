@@ -24,5 +24,6 @@
     <module>demo-spring-eureka</module>
     <module>demo-spring-gateway</module>
     <module>demo-spring-oauth2</module>
+    <module>demo-spring-quartz</module>
   </modules>
 </project>
