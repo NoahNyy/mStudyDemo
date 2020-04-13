@@ -1,0 +1,22 @@
+# Datasource
+spring:
+  application:
+    name: demo-mybatisplus
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mStudyDemo?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: admin
+    password: admin
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  quartz:
+    job-store-type: jdbc
+#    jdbc:
+      # 初始化脚本
+#      schema:
+      # 每次启动重新初始化数据库中Quartz相关的表，如果不需要每次启动服务都重新创建表，下面两项可以不配置，事先在数据库中创建好Quartz相关的表
+#      initialize-schema:
+    properties:
+      jobStore:
+        tablePrefix: qrtz_
