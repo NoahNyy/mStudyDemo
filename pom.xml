@@ -25,5 +25,6 @@
     <module>demo-flink</module>
     <module>demo-mybatisplus</module>
     <module>demo-java8</module>
+    <module>demo-git</module>
   </modules>
 </project>
