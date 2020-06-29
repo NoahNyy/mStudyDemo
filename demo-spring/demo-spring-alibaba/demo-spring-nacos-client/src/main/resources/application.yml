@@ -1,0 +1,12 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: nacos-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        # 命名空间
+#        namespace:

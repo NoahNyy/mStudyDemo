@@ -25,5 +25,6 @@
     <module>demo-spring-gateway</module>
     <module>demo-spring-oauth2</module>
     <module>demo-spring-quartz</module>
+    <module>demo-spring-alibaba</module>
   </modules>
 </project>
