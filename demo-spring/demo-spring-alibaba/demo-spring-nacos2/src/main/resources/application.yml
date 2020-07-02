@@ -1,0 +1,12 @@
+server:
+  port: 8103
+
+spring:
+  application:
+    name: nacos2-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        # 命名空间
+#        namespace:

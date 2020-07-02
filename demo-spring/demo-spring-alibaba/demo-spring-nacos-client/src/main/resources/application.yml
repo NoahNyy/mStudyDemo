@@ -8,5 +8,14 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-        # 命名空间
-#        namespace:
+          # 命名空间
+          #        namespace:
+
+#自定义Ribbon的全局配置
+#ribbon:
+#  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#自定义Ribbon的细粒度配置
+#content-center:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
