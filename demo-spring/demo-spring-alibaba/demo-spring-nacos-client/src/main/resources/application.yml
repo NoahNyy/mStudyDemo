@@ -19,3 +19,19 @@ spring:
 #content-center:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+feign:
+  client:
+    config:
+      default:
+        # NONE: 不输出日志
+        # BASIC: 只输出请求方法的URL和响应的状态码以及执行时间
+        # HEADERS: 将BASIC信息和请求头信息输出
+        # FULL: 输出完整的请求头信息
+        logger-level: BASIC
+        connect-timeout: 8000
+        read-timeout: 8000
+
+  sentinel:
+    enabled: true
+#  hystrix:
+#    enabled: true

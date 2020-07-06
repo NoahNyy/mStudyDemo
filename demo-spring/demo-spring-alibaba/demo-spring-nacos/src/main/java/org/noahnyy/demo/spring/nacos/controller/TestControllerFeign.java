@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020/6/29
  */
 @RestController
-public class TestController {
-//    @RequestMapping("/test")
+public class TestControllerFeign implements NacosDemoServiceExtend {
+
+    @Override
     public String getInstances(){
-        System.out.println("nacos-demo 被调用");
-        return "nacos-demo 被调用";
+        System.out.println("nacos2-demo 被调用");
+        return "nacos2-demo 被调用";
     }
 }

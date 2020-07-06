@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>demo-spring-nacos-client</artifactId>
-  <description>nacos 客户端</description>
+  <description>nacos 客户端/ Feign</description>
 
   <dependencies>
     <dependency>
@@ -28,10 +28,33 @@
       <version>2.1.1.RELEASE</version>
     </dependency>
 
-<!--    引入Ribbon spring-cloud-starter-alibaba-nacos-discovery已经有该依赖所以可以不引入 -->
-<!--    <dependency>-->
-<!--      <groupId>org.springframework.cloud</groupId>-->
-<!--      <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
-<!--    </dependency>-->
+    <!--引入Ribbon spring-cloud-starter-alibaba-nacos-discovery已经有该依赖所以可以不引入 -->
+    <!--<dependency>-->
+    <!--  <groupId>org.springframework.cloud</groupId>-->
+    <!--  <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
+    <!--</dependency>-->
+
+
+    <!--Feign-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+      <version>2.2.2.RELEASE</version>
+    </dependency>
+
+    <!--sentinel-->
+    <dependency>
+      <groupId>com.alibaba.cloud</groupId>
+      <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+      <version>2.2.1.RELEASE</version>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>demo-spring-nacos</artifactId>
+      <version>2.1.4.RELEASE</version>
+    </dependency>
   </dependencies>
 </project>
